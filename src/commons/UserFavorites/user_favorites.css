@@ -1,0 +1,62 @@
+.initial_users {
+    height: 100vh;
+}
+
+.title_fav_us{
+    font-size: 15px;
+    font-family: 'Public Sans', sans-serif;
+}
+
+.title_fav_us::first-letter {
+    padding-left: 60px;
+    text-transform: capitalize;
+}
+
+
+.back_Ufav {
+    padding-left: 60px;
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 0px;
+}
+
+.back_Ufav i {
+    font-size: 18px;
+    color: #fff;
+    margin: 0px;
+}
+
+.back_buttomUF {
+    font-family: 'Staatliches', cursive;
+    cursor: pointer;
+    position: relative;
+    font-size: 18px;
+    margin: 0px;
+    margin-bottom: 15px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 300;
+}
+
+.back_buttomUF::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    transform: scaleX(0);
+    transform-origin: top left;
+    transition: transform 0.3s ease;
+}
+
+.back_buttomUF:hover::before {
+    transform: scaleX(1);
+}
+
+.not_favs {
+    font-family: 'Public Sans', sans-serif;
+    margin: 150px 500px;
+}

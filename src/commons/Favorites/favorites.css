@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@200&family=Staatliches&display=swap');
+
+.initial_fav {
+    width: 100%;
+    height: 100vh;
+}
+
+.movie_code {
+    font-family: 'Staatliches', cursive;
+    padding-left: 60px;
+}
+
+.title_fav {
+    font-family: 'Public Sans', sans-serif;
+    font-size: 15px;
+    padding-left: 60px;
+}
+
+
+.back_fav {
+    padding-left: 60px;
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 0px;
+}
+
+.back_fav i {
+    font-size: 18px;
+    color: #fff;
+    margin: 0px;
+}
+
+.back_buttomF {
+    font-family: 'Staatliches', cursive;
+    cursor: pointer;
+    position: relative;
+    font-size: 18px;
+    margin: 0px;
+    margin-bottom: 15px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 300;
+}
+
+.back_buttomF::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    transform: scaleX(0);
+    transform-origin: top left;
+    transition: transform 0.3s ease;
+}
+
+.back_buttomF:hover::before {
+    transform: scaleX(1);
+}
+
+.not_favs {
+    font-family: 'Public Sans', sans-serif;
+    margin: 150px 500px;
+}
