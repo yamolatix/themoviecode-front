@@ -8,7 +8,7 @@ const useFavorite = (user, movie) => {
 
   const agregarFavoritos = () => {
     if (!user) throw toast.error('You need to be logged in');
-    axios.post(`http://www.localhost:3001/api/user/${user}/favorite/add`, {
+    axios.post(`https://themoviecode-back.onrender.com/api/user/${user}/favorite/add`, {
       tmdbId: movie.id,
       title: movie.title,
       poster_path: movie.poster_path,
@@ -25,7 +25,7 @@ const useFavorite = (user, movie) => {
   const eliminarFavoritos = () => {
     if (!user) throw toast.error('You need to be logged in');
     axios.delete(
-      `http://www.localhost:3001/api/user/${user}/${movie.id}/remove`)
+      `https://themoviecode-back.onrender.com/api/user/${user}/${movie.id}/remove`)
       .then(() => "Eliminado de favoritos")
       .catch(error => console.log(error))
     setFavorito(false)

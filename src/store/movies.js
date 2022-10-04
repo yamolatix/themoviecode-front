@@ -2,13 +2,15 @@ import { createAsyncThunk, createReducer } from '@reduxjs/toolkit'
 import axios from 'axios'
 
 export const allMovies = createAsyncThunk("ALL_MOVIES", () => {
-    return axios.get("http://localhost:3001/api/movies")
+    return axios.get("https://themoviecode-back.onrender.com/api/movies",
+        { withCredentials: true, credentials: 'include' })
         .then(user => user.data)
         .catch(error => console.log(error))
 });
 
 /* export const searchMovies = createAsyncThunk("SEARCH_MOVIE", (search) => {
-    return axios.get(`http://localhost:3001/api/movies/search/${search}`)
+    return axios.get(`https://themoviecode-back.onrender.com/api/movies/search/${search}`,
+     { withCredentials: true, credentials: 'include' })
         .then(movies => movies.data)
         .catch(error => console.log(error))
 }) */

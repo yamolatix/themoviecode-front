@@ -2,7 +2,8 @@ import { createAsyncThunk, createReducer } from '@reduxjs/toolkit'
 import axios from 'axios'
 
 export const showUsers = createAsyncThunk("SHOW_USERS", () => {
-    return axios.get(`http://localhost:3001/api/user/showUsers`)
+    return axios.get(`https://themoviecode-back.onrender.com/api/user/showUsers`,
+        { withCredentials: true, credentials: 'include' })
         .then(users => users.data)
         .catch(error => console.log(error))
 });

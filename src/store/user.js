@@ -3,7 +3,8 @@ import axios from 'axios';
 import toast from 'react-hot-toast';
 
 export const userRegister = createAsyncThunk("USER_REGISTER", (data) => {
-    return axios.post("http://localhost:3001/api/userAuth/register", data)
+    return axios.post("https://themoviecode-back.onrender.com/api/userAuth/register", data,
+        { withCredentials: true, credentials: 'include' })
         .then(user => user.data)
         .catch(error => {
             if (error.response.data.original.constraint === "users_username_key") {
@@ -17,7 +18,8 @@ export const userRegister = createAsyncThunk("USER_REGISTER", (data) => {
 });
 
 export const userLogin = createAsyncThunk("USER_LOGIN", (data) => {
-    return axios.post("http://localhost:3001/api/userAuth/login", data)
+    return axios.post("https://themoviecode-back.onrender.com/api/userAuth/login", data,
+        { withCredentials: true, credentials: 'include' })
         .then(user => {
             localStorage.setItem('user', JSON.stringify(user.data))
             return user.data;
@@ -32,7 +34,7 @@ export const userLogin = createAsyncThunk("USER_LOGIN", (data) => {
 });
 
 export const userLogout = createAsyncThunk("USER_LOGOUT", () => {
-    return axios.post("http://localhost:3001/api/userAuth/logout")
+    return axios.post("https://themoviecode-back.onrender.com/api/userAuth/logout")
         .then(() => {
             localStorage.removeItem("user")
         })
