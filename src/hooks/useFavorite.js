@@ -14,7 +14,7 @@ const useFavorite = (user, movie) => {
       poster_path: movie.poster_path,
       description: movie.overview,
       release_date: movie.release_date,
-    })
+    }, { withCredentials: true, credentials: 'include' })
       .then(() => "Se agrego tu favorito")
       .catch((error) => console.log(error))
     setFavorito(true)
@@ -25,7 +25,7 @@ const useFavorite = (user, movie) => {
   const eliminarFavoritos = () => {
     if (!user) throw toast.error('You need to be logged in');
     axios.delete(
-      `https://themoviecode-back.onrender.com/api/user/${user}/${movie.id}/remove`)
+      `https://themoviecode-back.onrender.com/api/user/${user}/${movie.id}/remove`, { withCredentials: true, credentials: 'include' })
       .then(() => "Eliminado de favoritos")
       .catch(error => console.log(error))
     setFavorito(false)
