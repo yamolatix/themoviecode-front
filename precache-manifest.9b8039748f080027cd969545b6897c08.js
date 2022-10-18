@@ -28,12 +28,12 @@ self.__precacheManifest = [
     "url": "/themoviecode-front/static/media/slick.b7c9e1e4.woff"
   },
   {
-    "revision": "d41f55a78e6f49a5512878df1737e58a",
-    "url": "/themoviecode-front/static/media/slick.d41f55a7.ttf"
-  },
-  {
     "revision": "f97e3bbf73254b0112091d0192f17aec",
     "url": "/themoviecode-front/static/media/slick.f97e3bbf.svg"
+  },
+  {
+    "revision": "d41f55a78e6f49a5512878df1737e58a",
+    "url": "/themoviecode-front/static/media/slick.d41f55a7.ttf"
   },
   {
     "revision": "ceb50a9868c8aa41a3ea24a69d5ad240",
