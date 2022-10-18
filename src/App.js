@@ -19,7 +19,7 @@ const App = () => {
       <Sidebar />
 
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/themoviecode-front" element={<Home />} />
         <Route path="/search/:category/:id" element={<CardDetails />} />
         <Route path="/search" element={<Search />} />
         <Route path="/search?q=:search" element={<Search />} />
